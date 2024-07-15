@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    /* font-family: 'Inter', sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* ================== Header ================== */
+.header-wrapper {
+    transition: 0.2s linear;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.25);
+    width: 100%;
+    z-index: 9;
+    background: #041330;
+}
+.mobile-nav-list {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/* ================== Banner ================== */
+.hero-sec {
+    background-image: url(https://plb-integrity1.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2024/04/23181311/NLC24-Buildings.png);
+    background-repeat: no-repeat;
+    /* background-size: contain; 123b79*/
+    position: relative;
+    background-position: left 60%;
+}
+.hero-sec::before{
+    content: '';
+    /* background-image: linear-gradient(180deg, #1b30a1, transparent); */
+    background-image: linear-gradient(180deg, #040e2c, #040e2c69);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* ================== Navigation Header ================== */
+.header-wrapper ul{
+    margin-top: 10px;
+    margin-left: auto;
+}
+/* .header-wrapper ul li a{
+    color: #fff;
+} */
+.fixed-header ul li{
+    font-weight: 600;
+}
+.fixed-header ul li a{
+    color: #fff
+}
+.sticy-logo{
+    display: none;
+}
+.fixed-header .sticy-logo{
+    display: block;
+}
+.fixed-header .noraml-logo{
+    display: none !important;
+   opacity: 0;
+}
+.icon-box {
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    border-radius: 27px;
+    background-color: #ea580c;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+    font-size: 40px;
+    display: flex;
+    line-height: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    transition: all .2s ease-in-out;
+}
+.icon-box i {
+    height: 1em;
+    width: 1em;
+    font-size: inherit;
+    position: relative;
+    display: block;
+    transition: inherit;
+    text-align: center;
+}
+
+.countdown-timer{
+    cursor: none;
+    pointer-events: none;
+}
+
+main {
+    background-image: linear-gradient(-5deg, #f6faff 60%, #f6faff 98%);
+}
+#countdown .text {
+    font-size: 32px;
+    color: #222a68;
+}
+/* FAQ */
+.accordion-item .accordion-heading {
+    position: relative;
+}
+.accordion-item.active .accordion-heading {
+    color: #222a68;
+    font-weight: 800;
+}
+.accordion-item .accordion-heading:after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: .25rem;
+    background-image: url(../images/icon_arrow_dark.svg);
+    background-repeat: no-repeat;
+}
+.accordion-item.active .accordion-heading:after {
+    transform: rotate(-180deg);
+} 
+/* Our Business */  
+.our-business {
+    background-image: url(https://plb-integrity1.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2024/04/16144417/NLC24_Banner_01.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} 
+.our-business::before{
+    content: '';
+    background-image: linear-gradient(158deg, #000000c9, #1b30a187);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* New Launch */
+.card-content{
+    padding: 20px 25px;
+}
+.house-type{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #041330;
+}
+.item-price{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 7px;
+}
+address{
+    color: #636363;
+    font-size: 15px;
+    font-style: normal;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+address::before{
+    content: '\f041';
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    line-height: 19px;
+    top: 2px; 
+}
+.h-name{
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+.pl-figure{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.area-postfix {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.ruler-icon{
+    width: 18px;
+    height: 18px;
+}
+/* What to expert */
+.plb-expert {
+    position: relative;
+    border: 1px solid #eee;
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 30px;
+}
+.plb-expert::before{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 0;
+    content: " ";
+    width: 120px;
+    height: 120px;
+    background: #123b79;
+    border-bottom-left-radius: 136px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.plb-expert-icon{
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    max-width: 60px;
+    z-index: 1;
+    text-align: center;
+}
+.plb-expert-desc{
+
+}
+.plb-expert-desc h4 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.plb-expert-line-left {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #123b79;
+    border-radius: 25%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.plb-expert-info{
+    margin-top: 32px;
+    padding-right: 30px;
+}
+/* Our Team */
+.team-item{
+    border: 1px solid #dfe0e6;
+    padding: 35px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    min-height: 442px;
+    margin-bottom: 16px;
+}
+.team-thumb {
+    padding-bottom: 30px;
+}
+.team-thumb img{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.team-name {
+    color: #222a68;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+.team-company{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+/* Our Points */
+.icon .fa{
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 17px;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    background: #222a68;
+    font-weight: 100;
+    margin-top: 9px;
+}
+.points-title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222a68e6;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+/* About */
+.about-plb{
+    position: relative;
+    margin-top: 20px;
+}
+.about-plb li{
+    padding-left: 33px;
+    position: relative;
+    padding-bottom: 16px;
+}
+.about-plb li::before{
+    content: "✓";
+    position: absolute;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: #123b79;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 12px;
+    top: 3px;
+}
+/* Reason to choose us */
+.plb-reason-to-choose .card{
+    position: relative;
+    background-image: url(https://img.freepik.com/free-photo/cityscape-bangkok-night-view_1357-300.jpg?t=st=1719438007~exp=1719441607~hmac=9693b0155a19313bc937fef3862a1aa02b54b522b0c1c02d877e5c7c781b0116&w=900);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.plb-reason-to-choose .card::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(18 59 121 / 82%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 10px;
+}
+.plb-reason-to-choose .icon-svg {
+    font-size: 82px;
+}
+.plb-reason-to-choose .card-icon-box svg {
+    fill: #fff;
+    height: 1em;
+    width: 1em;
+    margin: 0 auto;
+}
+.plb-reason-to-choose .card-icon-box h3{
+    font-weight: 700;
+    font-size: 44px;
+    margin-top: 16px;
+    color: #fff;
+}
+.plb-reason-to-choose .card-icon-box h3 small{
+    font-size: 50%;
+    display: block;
+    font-weight: normal;
+}
+/* ================== About ================== */
+
+.quote-card{
+    padding: 40px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 8px;
+}
+.quote-card h2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+.submit-quote-form input{
+    padding: 15px 25px;
+    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    background-color: #f9f9f9;
+    color: #737373;
+    width: 100%;
+    max-width: 100%;
+}
+.submit-quote-form input[type="checkbox"]{
+    /* width: auto;
+    max-width: auto; */
+    margin: 0 12px 0 0;
+    width: 25px;
+    height: 25px;
+    color: #565563;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    outline: none;
+    background-color: #f5f5f5;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    padding: 0;
+}
+.card-image-wrapper img {
+    min-height: 338px;
+    object-fit: cover;
+}
+/* ================== Mobile ================== */
+@media screen and (max-width: 767px) {
+    .mobile-nav-list {
+        display: block;
+        position: absolute;
+        width: 0;
+        background: #fff;
+        left: 0;
+        height: 100vh;
+        top: 70px;
+        z-index: 99;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        overflow: hidden;
+        transition: width 0.5s ease;
+    }
+
+    .mobile-nav-list.open {
+        width: 100%;
+    }
+
+    .fa.fa-bars {
+        font-size: 32px;
+        color: #254f99;
+    }
+
+    .header-wrapper {
+        background-color: #fff;
+    }
+
+    .mobile-nav {
+        display: block;
+        order: 2;
+    }
+
+    .header-wrapper nav ul li a {
+        font-weight: 600;
+    }
+
+    .header-wrapper nav ul li:first-child {
+        padding-top: 10px;
+    }
+
+    /* banner */
+    .simsys-offers-items {
+        flex-direction: column;
+    }
+
+    .card-container .card {
+        margin: auto 0.5rem;
+    }
+}
